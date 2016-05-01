@@ -1,0 +1,85 @@
+.container{ 	
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	height:200px;
+	width:200px;
+}
+.square{
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-o-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	
+	-webkit-animation:myAnimation ease-in-out infinite 3s; 
+	-moz-animation:myAnimation ease-in-out infinite 3s; 
+	-o-animation:myAnimation ease-in-out infinite 3s; 
+	-ms-animation:myAnimation ease-in-out infinite 3s; 
+	animation:myAnimation ease-in-out infinite 3s; 
+	/*-webkit-perspective:138px;视距*/
+	/*-webkit-perspective-origin:25% 75%;*/
+
+	-webkit-transform-origin:90px 90px 0;/*运动基准*/
+	-moz-transform-origin:90px 90px 0;
+	-o-transform-origin:90px 90px 0;
+	-ms-transform-origin:90px 90px 0;
+	transform-origin:90px 90px 0;
+}
+@-webkit-keyframes myAnimation{
+16% { -webkit-transform:rotateY(90deg);}
+33% { -webkit-transform:rotateY(90deg) rotateZ(135deg);}
+50% { -webkit-transform:rotateY(225deg) rotateZ(135deg);}
+66% { -webkit-transform:rotateY(135deg) rotateZ(135deg);}
+83% { -webkit-transform:rotateX(-135deg)}
+}
+@-moz-keyframes myAnimation{
+16% { -moz-transform:rotateY(90deg);}
+33% { -moz-transform:rotateY(90deg) rotateZ(135deg);}
+50% { -moz-transform:rotateY(225deg) rotateZ(135deg);}
+66% { -moz-transform:rotateY(135deg) rotateZ(135deg);}
+83% { -moz-transform:rotateX(-135deg)}
+}
+@-o-keyframes myAnimation{
+16% { -o-transform:rotateY(90deg);}
+33% { -o-transform:rotateY(90deg) rotateZ(135deg);}
+50% { -o-transform:rotateY(225deg) rotateZ(135deg);}
+66% { -o-transform:rotateY(135deg) rotateZ(135deg);}
+83% { -o-transform:rotateX(-135deg)}
+}
+@-ms-keyframes myAnimation{
+16% { -ms-transform:rotateY(90deg);}
+33% { -ms-transform:rotateY(90deg) rotateZ(135deg);}
+50% { -ms-transform:rotateY(225deg) rotateZ(135deg);}
+66% { -ms-transform:rotateY(135deg) rotateZ(135deg);}
+83% { -ms-transform:rotateX(-135deg)}
+}
+@keyframes myAnimation{
+16% { transform:rotateY(90deg);}
+33% { transform:rotateY(90deg) rotateZ(135deg);}
+50% { transform:rotateY(225deg) rotateZ(135deg);}
+66% { transform:rotateY(135deg) rotateZ(135deg);}
+83% { transform:rotateX(-135deg)}
+}
+.square>div{
+	position:absolute;
+	width:180px;
+	height:180px;
+	text-align:center;
+}
+.A{ transform:translateZ(80px);}
+.B{ transform:rotateX(-90deg) translateZ(90px) ;}
+.C{ transform:rotateX(90deg) translateZ(90px);}
+.D{ transform:translateZ(-90px);}
+.E{ transform: rotateY(-90deg) translateZ(90px);}
+.F{ transform: rotateY(90deg) translateZ(90px);}
+/*魔方每个面的小正方形*/
+.A div{ width:58px; height:58px; background:#F00; border:1px solid #333; border-radius:5px; float:left;}
+.B div{ width:58px; height:58px; background:#00F; border:1px solid #333; border-radius:5px; float:left;}
+.C div{ width:58px; height:58px; background:#0F0; border:1px solid #333; border-radius:5px; float:left;}
+.D div{ width:58px; height:58px; background:#FF0; border:1px solid #333; border-radius:5px; float:left;}
+.E div{ width:58px; height:58px; background:#F60; border:1px solid #333; border-radius:5px; float:left;}
+.F div{ width:58px; height:58px; background:#FFF; border:1px solid #333; border-radius:5px; float:left;}
